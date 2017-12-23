@@ -16,8 +16,9 @@ class TweetIndex(DocType):
 
 
 class ElasticTweet(object):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, item_count=100, **kwargs):
         self.s = Search()
+        self.item_count = item_count
 
     def search(self, query):
         if query.get('start_date') or query.get('end_date'):
