@@ -35,7 +35,7 @@ class ElasticTweet(object):
         if query.get('q'):
             self.s = self.s.filter('match', tweet=query['q'])
 
-        return self._clean(self.s[0:self.s.count()].execute())
+        return self._clean(self.s[0:self.item_count].execute())
 
     def _clean(self, tweets):
         return [tweet.to_dict() for tweet in tweets]
