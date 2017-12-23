@@ -40,11 +40,9 @@ API
 ### Authentication ###
 This API supports token based authentication.
 
-* Token based authentication using curl: `curl -X GET http://127.0.0.1:8000/ 'Authorization: Token <token>'`
+* Token based authentication example: `curl -X GET http://127.0.0.1:8000/ 'Authorization: Token <token>'`
 
-Take a look at the `authtoken_token` table in the DB with `select * from authtoken_token;`, you should see all the entries of the users with their auth token. You can use this for token based authentication.
-
-In this project every request requires authentication.
+In this project every request requires to authenticated.
 
 #### Obtaining auth token ####
 You can generate token by making POST request to `/api-token-auth/` and sending
