@@ -7,6 +7,9 @@ connections.create_connection()
 
 
 class TweetIndex(DocType):
+    """
+    Elasticsearch document
+    """
     user = Text(analyzer='default')
     tweet = Text(analyzer='default')
     created_at = Date()
@@ -16,11 +19,20 @@ class TweetIndex(DocType):
 
 
 class ElasticTweet(object):
+    """
+    Elasticsearch query using dsl wrapper
+    """
     def __init__(self, *args, item_count=100, **kwargs):
         self.s = Search()
         self.item_count = item_count
 
     def search(self, query):
+        """
+        Search documents
+
+        :param query:(dict) query parameters from GET request
+        :returns:(list) of tweets
+        """
         if query.get('start_date') or query.get('end_date'):
             date_range = {}
             if query.get('start_date'):

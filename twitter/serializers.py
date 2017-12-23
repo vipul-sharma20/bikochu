@@ -4,6 +4,9 @@ from rest_framework import pagination
 
 
 class TweetPaginator(pagination.PageNumberPagination):
+    """
+    Custome pagination for result (tweets) data
+    """
     def get_paginated_response(self, data):
         return Response({'count': self.page.paginator.count,
                          'next': self.get_next_link(),

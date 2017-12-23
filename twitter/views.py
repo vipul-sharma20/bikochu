@@ -15,6 +15,9 @@ class Home(APIView):
 
 
 class TweetList(APIView):
+    """
+    Tweet search view
+    """
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)
 
