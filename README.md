@@ -107,15 +107,16 @@ Suppose the token for a user _bruce_ is `c13a415a575338f7384d248934ad5e31ab957ab
 Next Steps?
 -----------
 
-NOTE:
+#### NOTE ####
+
 * For fetching and dumping tweets in elasticsearch, I used the Twitter streaming API
     * script used: [https://gist.github.com/vipul-sharma20/6f0bbe21d8d74a94f97d18a483205c26](https://gist.github.com/vipul-sharma20/6f0bbe21d8d74a94f97d18a483205c26)
+    * tweets with keywords = ['bitcoin', 'ethereum', 'litecoin', 'ripple', 'cryptocurrency', 'the']
 * Elasticsearch is on the same instance using 1GB of heap size
 
 ## Test it live ##
 
-with keywords = ['bitcoin', 'ethereum', 'litecoin', 'ripple', 'cryptocurrency', 'the']
-
+* Sample Postman collection with test user: [https://www.getpostman.com/collections/8439771b3600285fc05f](https://www.getpostman.com/collections/8439771b3600285fc05f)
 * There exists a user on production environment
     * username: `test`
     * password: `test`
