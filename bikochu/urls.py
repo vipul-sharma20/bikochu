@@ -9,5 +9,5 @@ urlpatterns = [
     # Examples:
     url(r'^', include(twitter_urls)),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api-token-auth/', views.obtain_auth_token),
+    url(r'^api-token-auth/', views.obtain_auth_token, name='token_auth'),
 ]

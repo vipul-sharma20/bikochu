@@ -1,4 +1,4 @@
-from django.core.paginator import Paginator
+from django.core.urlresolvers import reverse
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
@@ -6,6 +6,12 @@ from rest_framework.response import Response
 
 from .serializers import TweetPaginator
 from .search import ElasticTweet
+
+
+class Home(APIView):
+    def get(self, request):
+        return Response(dict(search_api=reverse('tweet_search'),
+                             get_auth_token=reverse('token_auth')))
 
 
 class TweetList(APIView):
