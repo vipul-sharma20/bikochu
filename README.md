@@ -5,6 +5,8 @@ REST API built in Django/Python for searching tweets
 live demo at: [http://50.116.0.97](http://50.116.0.97)
 see bottom of this document for more details on the live demo.
 
+Project name: [reference](http://naruto.wikia.com/wiki/Bik%C5%8Dch%C5%AB_Search_Mission)
+
 How to run?
 -----------
 
@@ -35,7 +37,7 @@ How to run?
 ### Authentication ###
 This API supports token based authentication.
 
-* Token based authentication using httpie: `curl -X GET http://127.0.0.1:8000/ 'Authorization: Token <token>'`
+* Token based authentication using curl: `curl -X GET http://127.0.0.1:8000/ 'Authorization: Token <token>'`
 
 Take a look at the `authtoken_token` table in the DB with `select * from authtoken_token;`, you should see all the entries of the users with their auth token. You can use this for token based authentication.
 
