@@ -72,10 +72,10 @@ Suppose the token for a user _bruce_ is `c13a415a575338f7384d248934ad5e31ab957ab
 #### Sample Response ####
 
     {
-        "count": 30,
-        "next": "?page=2",
-        "previous": "?page=1",
-        "tweets": [
+            "count": 30,
+            "next": "?page=2",
+            "previous": "?page=1",
+            "tweets": [
             {
                 "user": "mickeytrader",
                 "tweet": "RT @ORACLEofETH: WOW better buy the other coins now before the big #BitcoinCash dump!\n\nIf  \"Bitcoin Cash\" hits $0 in the next 24 hrs...\nIll…",
