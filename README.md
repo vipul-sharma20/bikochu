@@ -48,17 +48,17 @@ You can generate token by making POST request to `/api-token-auth/` and sending
 * **`/api-token-auth/`**
 * **Request Type:** POST
 * **POST body:**
-  * `username`
-  * `password`
+    * `username`: username
+    * `password`: password
 
 ### Search ###
 * **`/tweets/`**
 * **Request Type:** GET
 * **GET parameters:**
-  * `user`: author of the tweet
-  * `q`: query string to match against tweets
-  * `start_date`: start date for time range filtering (isoformat)
-  * `end_date`: end date for time range filtering (isoformat)
+    * `user`: author of the tweet
+    * `q`: query string to match against tweets
+    * `start_date`: start date for time range filtering (isoformat)
+    * `end_date`: end date for time range filtering (isoformat)
 * Returns paginated response
 
 #### Example ####
@@ -107,15 +107,21 @@ Suppose the token for a user _bruce_ is `c13a415a575338f7384d248934ad5e31ab957ab
 Next Steps?
 -----------
 
+NOTE:
+* For fetching and dumping tweets in elasticsearch, I used the Twitter streaming API
+    * script used: [https://gist.github.com/vipul-sharma20/6f0bbe21d8d74a94f97d18a483205c26](https://gist.github.com/vipul-sharma20/6f0bbe21d8d74a94f97d18a483205c26)
+* Elasticsearch is on the same instance using 1GB of heap size
+
 ## Test it live ##
 
+with keywords = ['bitcoin', 'ethereum', 'litecoin', 'ripple', 'cryptocurrency', 'the']
+
 * There exists a user on production environment
-    * username: ``
-    * password: ``
+    * username: `test`
+    * password: `test`
 * Get auth token by:
     * POST `http://50.116.0.97:8000/api-token-auth/` with `username` and `password` in body
-    * You can use auth token generated from production for above created user: ``
+    * You can use auth token generated from production for above created user: `3749627cfc80e9e9fe3473f275db4479292fe93f`
 * Make request:
-    * Example: `curl -X GET http://50.116.0.97:8000/tweets/ -H 'Authorization: Token '`
-
+    * Example: `curl -X GET http://50.116.0.97:8000/tweets/ -H 'Authorization: Token 3749627cfc80e9e9fe3473f275db4479292fe93f'`
 
