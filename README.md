@@ -1,8 +1,8 @@
 bikochu
 =======
 
-REST API built in Django/Python for managing products of an online store
-live demo at: [https://pure-caverns-3351.herokuapp.com/](https://pure-caverns-3351.herokuapp.com/)
+REST API built in Django/Python for searching tweets
+live demo at: [http://50.116.0.97](http://50.116.0.97)
 see bottom of this document for more details on the live demo.
 
 How to run?
