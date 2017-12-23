@@ -11,7 +11,7 @@ How to run?
 -----------
 
 ### Clone ###
-* `git clone ssh://hg@bitbucket.org/vipul-sharma/bikochu`
+* `git clone https://github.com/vipul-sharma20/bikochu.git`
 * `cd bikochu`
 
 ### Virtual Environment ###
@@ -33,6 +33,9 @@ How to run?
 * `python manage.py test`
 
 * `python manage.py runserver` This will run the application on [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+API
+---
 
 ### Authentication ###
 This API supports token based authentication.
